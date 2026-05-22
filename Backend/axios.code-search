@@ -1,0 +1,113 @@
+# Query: axios
+# ContextLines: 1
+
+25 results - 20 files
+
+Frontend\package-lock.json:
+    10        "dependencies": {
+    11:         "axios": "^1.6.2",
+    12          "framer-motion": "^10.16.16",
+
+  1449      },
+  1450:     "node_modules/axios": {
+  1451        "version": "1.16.1",
+  1452:       "resolved": "https://registry.npmjs.org/axios/-/axios-1.16.1.tgz",
+  1453        "integrity": "sha512-caYkukvroVPO8KrzuJEb50Hm07KwfBZPEC3VeFHTsqWHvKTsy54hjJz9BS/cdaypROE2rH6xvm9mHX4fgWkr3A==",
+
+Frontend\package.json:
+  11    "dependencies": {
+  12:     "axios": "^1.6.2",
+  13      "framer-motion": "^10.16.16",
+
+Frontend\src\api\axios.js:
+  1: import axios from "axios";
+  2  
+  3  // Base URL - uses Vite proxy in dev, direct in prod
+  4: const API = axios.create({
+       baseURL: `${import.meta.env.VITE_API_URL}/api`,
+     });
+
+Frontend\src\components\books\BookCard.jsx:
+  4  import { useAuth } from "../../context/AuthContext";
+  5: import API from "../../api/axios";
+  6  import toast from "react-hot-toast";
+
+Frontend\src\context\AuthContext.jsx:
+  1  import { createContext, useContext, useState, useEffect } from "react";
+  2: import API from "../api/axios";
+  3  import toast from "react-hot-toast";
+
+Frontend\src\layouts\UserLayout.jsx:
+   9  } from "react-icons/hi";
+  10: import API from "../api/axios";
+  11  import { io } from "socket.io-client";
+
+Frontend\src\pages\admin\Books.jsx:
+  3  import { HiPlus, HiPencil, HiTrash, HiSearch, HiX, HiPhotograph } from "react-icons/hi";
+  4: import API from "../../api/axios";
+  5  import toast from "react-hot-toast";
+
+Frontend\src\pages\admin\Borrows.jsx:
+  3  import { HiSearch, HiCurrencyRupee, HiCheckCircle, HiRefresh } from "react-icons/hi";
+  4: import API from "../../api/axios";
+  5  import toast from "react-hot-toast";
+
+Frontend\src\pages\admin\Categories.jsx:
+  3  import { HiPlus, HiPencil, HiTrash, HiX } from "react-icons/hi";
+  4: import API from "../../api/axios";
+  5  import toast from "react-hot-toast";
+
+Frontend\src\pages\admin\Dashboard.jsx:
+  4  import { HiUsers, HiBookOpen, HiClock, HiExclamation, HiCurrencyRupee, HiCheckCircle } from "react-icons/hi";
+  5: import API from "../../api/axios";
+  6  
+
+Frontend\src\pages\admin\Users.jsx:
+  3  import { HiSearch, HiUser, HiCheckCircle, HiXCircle } from "react-icons/hi";
+  4: import API from "../../api/axios";
+  5  import toast from "react-hot-toast";
+
+Frontend\src\pages\auth\ForgotPassword.jsx:
+  2  import { Link } from "react-router-dom";
+  3: import API from "../../api/axios";
+  4  import { motion } from "framer-motion";
+
+Frontend\src\pages\auth\ResetPassword.jsx:
+  2  import { useParams, useNavigate } from "react-router-dom";
+  3: import API from "../../api/axios";
+  4  import { motion } from "framer-motion";
+
+Frontend\src\pages\user\BookDetail.jsx:
+  4  import { HiStar, HiBookOpen, HiDownload, HiHeart, HiArrowLeft, HiClock } from "react-icons/hi";
+  5: import API from "../../api/axios";
+  6  import { useAuth } from "../../context/AuthContext";
+
+Frontend\src\pages\user\Books.jsx:
+  3  import { motion } from "framer-motion";
+  4: import API from "../../api/axios";
+  5  import BookCard from "../../components/books/BookCard";
+
+Frontend\src\pages\user\Home.jsx:
+  4  import { useAuth } from "../../context/AuthContext";
+  5: import API from "../../api/axios";
+  6  import BookCard from "../../components/books/BookCard";
+
+Frontend\src\pages\user\MyBooks.jsx:
+  3  import { HiBookOpen, HiClock, HiExclamation, HiCheckCircle, HiCurrencyRupee } from "react-icons/hi";
+  4: import API from "../../api/axios";
+  5  import toast from "react-hot-toast";
+
+Frontend\src\pages\user\Notifications.jsx:
+  3  import { HiBell, HiCheckCircle, HiBookOpen, HiExclamation, HiCurrencyRupee, HiSparkles } from "react-icons/hi";
+  4: import API from "../../api/axios";
+  5  import toast from "react-hot-toast";
+
+Frontend\src\pages\user\Profile.jsx:
+  4  import { useAuth } from "../../context/AuthContext";
+  5: import API from "../../api/axios";
+  6  import toast from "react-hot-toast";
+
+Frontend\src\pages\user\Wishlist.jsx:
+  4  import { HiHeart, HiStar, HiBookOpen } from "react-icons/hi";
+  5: import API from "../../api/axios";
+  6  import toast from "react-hot-toast";
